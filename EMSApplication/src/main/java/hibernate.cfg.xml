@@ -3,10 +3,7 @@
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
    <session-factory>
-	  <!-- create, update -->
-	  <property name="hbm2ddl.auto">create</property>
-	  <property name="show_sql">true</property>
-	  
+
       <property name = "hibernate.dialect">
         org.hibernate.dialect.Oracle9Dialect
       </property>
@@ -26,18 +23,9 @@
       <property name = "hibernate.connection.password">
         hr
       </property>
-		
-	 <mapping class ="com.lti.hiber.HibernateTask.Department"/>
-	 <mapping class ="com.lti.mapping.Course"/>
-	 <mapping class ="com.lti.mapping.Student"/>
-	 <mapping class ="com.lti.inheritance.Bank"/>
-	 <mapping class ="com.lti.inheritance.ICICI"/>
-	 <mapping class ="com.lti.inheritance.SBI"/>
-      <!-- List of XML mapping files 
-      <mapping resource = "Department.hbm.xml"/>-->
+
+      <!-- List of XML mapping files -->
+      <mapping class = "com.ems.model.Employee"/>
 
    </session-factory>
 </hibernate-configuration>
-
-
-
